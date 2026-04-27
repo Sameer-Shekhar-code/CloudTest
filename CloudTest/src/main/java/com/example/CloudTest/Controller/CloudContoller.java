@@ -6,16 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.sound.midi.Soundbank;
+import java.net.InetAddress;
 
 @RestController
 public class CloudContoller {
 
-    @Value("${instance.name:Default-User}")
-    private String instanceName;
-
     @GetMapping("/test")
-    public String print() {
-        return "Hello from " + instanceName;
-    }
+    public String print() throws Exception {
+        String hostname = InetAddress.getLocalHost().getHostName();
+        return "Hello from " + hostname;}
 
 }
