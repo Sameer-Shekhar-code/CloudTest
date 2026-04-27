@@ -14,6 +14,6 @@ public class CloudContoller {
     @GetMapping("/test")
     public String print() throws Exception {
         String hostname = InetAddress.getLocalHost().getHostName();
-        return "Hello from " + hostname;}
+        return "Hello from Tanisha " + hostname;}
 
 }
