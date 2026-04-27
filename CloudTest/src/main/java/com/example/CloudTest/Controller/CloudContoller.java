@@ -10,7 +10,7 @@ import javax.sound.midi.Soundbank;
 @RestController
 public class CloudContoller {
 
-    @Value("${instance.name}")
+    @Value("${instance.name:Default-User}")
     private String instanceName;
 
     @GetMapping("/test")
